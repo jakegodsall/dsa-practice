@@ -2,6 +2,9 @@
 
 def sum_digits(num):
 
+    assert num >= 0 and int(
+        num) == num, 'The number has to be a positive integer'
+
     div, mod = divmod(num, 10)
 
     if div == 0:
@@ -11,4 +14,4 @@ def sum_digits(num):
 
 
 if __name__ == '__main__':
-    print(sum_digits(1235))
+    print(sum_digits(-1235))
