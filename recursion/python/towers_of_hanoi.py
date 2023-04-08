@@ -61,9 +61,12 @@ class TowersOfHanoi:
             self.print_towers()
         else:
             # recursive case
+            # move n-1 disks from start tower to temp tower
             self.solve(num_disks - 1, start_tower, temp_tower, end_tower)
+            # move disk n from start tower to end tower
             self.move_one_disk(start_tower, end_tower)
             self.print_towers()
+            # move n-1 disks from temp tower to end tower
             self.solve(num_disks - 1, temp_tower, end_tower, start_tower)
             return
 
